@@ -47,14 +47,6 @@ matrix:
               - cmake .. -GNinja -DCMAKE_BUILD_TYPE=Debug
           script:  ninja
 
-        - env: test="OSX (CMake clang)"
-          os: osx
-          compiler: clang
-          before_script:
-              - mkdir osx_rel && cd osx_rel
-              - cmake ..
-          script: make
-
         - env: test="Android NDK (CMake)"
           language:
               - android
