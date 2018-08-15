@@ -8,7 +8,10 @@ endif()
 
 if ("${CMAKE_C_COMPILER_ID}" STREQUAL "GNU")
   add_definitions(-D_GNU_SOURCE)
+elseif ("${CMAKE_C_COMPILER_ID}" STREQUAL "Clang")
+  add_definitions(-D_GNU_SOURCE)
 endif()
+
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wno-parentheses")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fno-strict-aliasing")
